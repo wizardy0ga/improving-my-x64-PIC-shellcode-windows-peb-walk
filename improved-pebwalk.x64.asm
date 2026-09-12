@@ -1,3 +1,8 @@
+; Author: Wizardy0ga
+;
+; Dynamically locates kernel32.dll using string comparison from
+; PEB, then locates WinExec and launches calc.exe
+;
 bits 64
 default rel
 global main
@@ -55,7 +60,7 @@ begin_function_search:
     jmp begin_function_search
 export_limit_reached:
     ret
-    
+
     ; --- Step 5: Execute the winexec function 
     ;
 found_function:
