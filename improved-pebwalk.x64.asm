@@ -3,6 +3,9 @@
 ; Dynamically locates kernel32.dll using string comparison from
 ; PEB, then locates WinExec and launches calc.exe
 ;
+; Assemble: nasm -f win64 improved-pebwalk.x64.asm -o improved.obj
+; Link: link.exe /subsystem:console /entry:main improved.obj
+;
 bits 64
 default rel
 global main
