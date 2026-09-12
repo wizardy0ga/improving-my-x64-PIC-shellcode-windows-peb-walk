@@ -6,6 +6,8 @@
 ; Assemble: nasm -f win64 improved-pebwalk.x64.asm -o improved.obj
 ; Link: link.exe /subsystem:console /entry:main improved.obj
 ;
+; Tested on: Windows 10 Pro 22H2 19045.6466
+;            Winodws 11 Pro 25H2 26200.9445
 bits 64
 default rel
 global main
